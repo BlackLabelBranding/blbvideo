@@ -3,8 +3,6 @@
 
 import { motion } from "motion/react";
 import { Button } from "../ui/button";
-import { SponsorButton } from "../ui/sponsor-button";
-import { VercelIcon } from "../icons";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Handlebars } from "./handlebars";
