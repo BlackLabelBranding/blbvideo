@@ -33,11 +33,6 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mb-4 flex justify-center"
-        >
-          <SponsorButton
-            href="https://vercel.com/home?utm_source=blacklabelvision"
-            logo={VercelIcon}
-            companyName="Vercel"
           />
         </motion.div>
 
