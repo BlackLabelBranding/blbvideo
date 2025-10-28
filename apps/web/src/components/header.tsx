@@ -1,23 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { ArrowRight } from "lucide-react";
-import { HeaderBase } from "./header-base";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+
+import { HeaderBase } from "./header-base";
+import { Button } from "./ui/button";
 import { ThemeToggle } from "./theme-toggle";
+import { SITE_INFO } from "@/constants/site";
+
+const LOGO_URL =
+  "https://xopcttkrmjvwdddawdaa.supabase.co/storage/v1/object/public/Logos/Blacklabellogo.jpg";
 
 export function Header() {
   const leftContent = (
     <Link href="/" className="flex items-center gap-3">
       <Image
-        src="/logo.svg"
-        alt="OpenCut Logo"
-        className="invert dark:invert-0"
+        src={LOGO_URL}
+        alt="Black Label Vision Logo"
         width={32}
         height={32}
+        className="rounded"
+        priority
       />
-      <span className="text-xl font-medium hidden md:block">OpenCut</span>
+      <span className="hidden md:block text-xl font-medium">
+        {SITE_INFO.title}
+      </span>
     </Link>
   );
 
@@ -25,20 +33,20 @@ export function Header() {
     <nav className="flex items-center gap-2">
       <div className="flex items-center gap-4">
         <Link href="/blog">
-          <Button variant="text" className="text-sm p-0">
+          <Button variant="text" className="p-0 text-sm">
             Blog
           </Button>
         </Link>
         <Link href="/contributors">
-          <Button variant="text" className="text-sm p-0">
+          <Button variant="text" className="p-0 text-sm">
             Contributors
           </Button>
         </Link>
       </div>
       <Link href="/projects">
-        <Button size="sm" className="text-sm ml-2">
+        <Button size="sm" className="ml-2 text-sm">
           Projects
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="ml-1 h-4 w-4" />
         </Button>
       </Link>
       <ThemeToggle className="mr-2" />
