@@ -1,4 +1,3 @@
-// apps/web/src/components/landing/hero.tsx
 "use client";
 
 import { motion } from "motion/react";
@@ -9,15 +8,19 @@ import { Handlebars } from "./handlebars";
 import Link from "next/link";
 import { SITE_INFO } from "@/constants/site";
 
+// Change this to your image:
+// - local: "/hero-bg.jpg" (put the file in apps/web/public/hero-bg.jpg)
+// - remote (Supabase): "https://xopcttkrmjvwdddawdaa.supabase.co/storage/v1/object/public/Logos/Blacklabellogo.jpg"
+const HERO_BG = "/landing-page-dark.png";
+
 export function Hero() {
   return (
     <div className="min-h-[calc(100svh-4.5rem)] flex flex-col justify-between items-center text-center px-4">
       <Image
-        className="absolute top-0 left-0 -z-50 size-full object-cover invert dark:invert-0 opacity-85"
-        src="/landing-page-dark.png"
-        height={1904}
-        width={1269}
-        alt="landing background"
+        className="absolute top-0 left-0 -z-50 object-cover opacity-85"
+        src={HERO_BG}
+        alt="background"
+        fill
         priority
       />
 
@@ -27,15 +30,6 @@ export function Hero() {
         transition={{ duration: 1 }}
         className="max-w-3xl mx-auto w-full flex-1 flex flex-col justify-center"
       >
-        {/* Sponsor pill (optional) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="mb-4 flex justify-center"
-          />
-        </motion.div>
-
         {/* Headline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +51,7 @@ export function Hero() {
           {SITE_INFO.description}
         </motion.p>
 
-        {/* CTA */}
+        {/* CTAs */}
         <motion.div
           className="mt-8 flex gap-8 justify-center"
           initial={{ opacity: 0 }}
