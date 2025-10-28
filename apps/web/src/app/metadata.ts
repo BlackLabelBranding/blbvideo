@@ -1,3 +1,4 @@
+// apps/web/src/app/metadata.ts
 import type { Metadata } from "next";
 import { SITE_INFO, SITE_URL } from "@/constants/site";
 
@@ -17,7 +18,7 @@ export const baseMetaData: Metadata = {
         url: SITE_INFO.openGraphImage,
         width: 1200,
         height: 630,
-        alt: "OpenCut Wordmark",
+        alt: "Black Label Vision",
       },
     ],
   },
@@ -25,9 +26,11 @@ export const baseMetaData: Metadata = {
     card: "summary_large_image",
     title: SITE_INFO.title,
     description: SITE_INFO.description,
-    creator: "@opencutapp",
     images: [SITE_INFO.twitterImage],
+    // If you have a handle, add it here:
+    // creator: "@blacklabelvision",
   },
+  // Pinterest meta supported by Next's `other` if you need more; this flag is fine:
   pinterest: {
     richPin: false,
   },
@@ -47,31 +50,11 @@ export const baseMetaData: Metadata = {
       { url: "/icons/apple-icon-60x60.png", sizes: "60x60", type: "image/png" },
       { url: "/icons/apple-icon-72x72.png", sizes: "72x72", type: "image/png" },
       { url: "/icons/apple-icon-76x76.png", sizes: "76x76", type: "image/png" },
-      {
-        url: "/icons/apple-icon-114x114.png",
-        sizes: "114x114",
-        type: "image/png",
-      },
-      {
-        url: "/icons/apple-icon-120x120.png",
-        sizes: "120x120",
-        type: "image/png",
-      },
-      {
-        url: "/icons/apple-icon-144x144.png",
-        sizes: "144x144",
-        type: "image/png",
-      },
-      {
-        url: "/icons/apple-icon-152x152.png",
-        sizes: "152x152",
-        type: "image/png",
-      },
-      {
-        url: "/icons/apple-icon-180x180.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
+      { url: "/icons/apple-icon-114x114.png", sizes: "114x114", type: "image/png" },
+      { url: "/icons/apple-icon-120x120.png", sizes: "120x120", type: "image/png" },
+      { url: "/icons/apple-icon-144x144.png", sizes: "144x144", type: "image/png" },
+      { url: "/icons/apple-icon-152x152.png", sizes: "152x152", type: "image/png" },
+      { url: "/icons/apple-icon-180x180.png", sizes: "180x180", type: "image/png" },
     ],
     shortcut: ["/favicon.ico"],
   },
@@ -84,3 +67,4 @@ export const baseMetaData: Metadata = {
     "msapplication-config": "/browserconfig.xml",
   },
 };
+
