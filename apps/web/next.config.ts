@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "api.simplesvg.com" },
       { protocol: "https", hostname: "api.unisvg.com" },
 
-      // ✅ Allow your Supabase-hosted logo & assets
+      // ✅ Supabase-hosted assets (logos/backgrounds)
       {
         protocol: "https",
         hostname: "xopcttkrmjvwdddawdaa.supabase.co",
